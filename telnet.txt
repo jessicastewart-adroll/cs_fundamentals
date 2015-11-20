@@ -1,0 +1,15 @@
+-talk http (and other protocols), text window to a port
+-functions similarly to web browser
+-requires listening socket receiving text commands
+
+-ssh opens shell on remote server
+-ssl layer
+-openssl is ssh with text
+
+$ telnet www.google.com 80
+Trying 74.125.239.146...
+Connected to www.google.com.
+Escape character is '^]'.
+$ GET / HTTP/1.1
+$ Host: www.google.com
+>> output is HTTP header and HTML
