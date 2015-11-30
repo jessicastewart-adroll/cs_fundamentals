@@ -3,6 +3,7 @@ I.
     Use 17.2 socket to play with the program
     Make accept more than one connection successively
     Terminate connection on ctrl+D or 'quit' input
+    ??? program hangs
 
 II.
     openssl command -> connect to Google over https
