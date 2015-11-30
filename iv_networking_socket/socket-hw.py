@@ -6,13 +6,14 @@ I.
 
 II.
     openssl command -> connect to Google over https
+    $ openssl s_client -connect google.com:443
+    ??? verify error:num=20:unable to get local issuer certificate
 
 III.
-    Decrypt ROT13:
-        Gel gur ffy_pyvrag pbzznaq.
-        Hfr gur -pbaarpg bcgvba.
+    Decrypt ROT13: http://rot13.com/index.php
+        Gel gur ffy_pyvrag pbzznaq. -> Try the ssl_client command
+        Hfr gur -pbaarpg bcgvba. -> Use the -connect option
 '''
-
 import socket
 
 TCP_IP = '0.0.0.0'  # This means that we should bind to all the addresses your computer has
