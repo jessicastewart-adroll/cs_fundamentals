@@ -4,12 +4,14 @@ I.
     Make accept more than one connection successively
     Terminate connection on ctrl+C or 'quit' input
 
-client quit > server keyboard interrupt > create new binding on server: [Errno 48] Address already in use
+    client quit > server keyboard interrupt > create new binding on server: [Errno 48] Address already in use
+    list bindings and listeners on port > lsof -i tcp:5005
 
 II.
     openssl command -> connect to Google over https
     $ openssl s_client -connect google.com:443
-    ??? verify error:num=20:unable to get local issuer certificate
+    verify error:num=20:unable to get local issuer certificate
+        CA > certification authority > verifies owner of public keys
 
 III.
     Decrypt ROT13: http://rot13.com/index.php
