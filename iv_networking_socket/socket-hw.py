@@ -10,8 +10,11 @@ I.
 II.
     openssl command -> connect to Google over https
     $ openssl s_client -connect google.com:443
-    verify error:num=20:unable to get local issuer certificate
-        CA > certification authority > verifies owner of public keys
+    $ GET / HTTP/1.0
+
+    telnet command -> connect to Google over http
+    $ telnet google.com 80
+    $ GET / HTTP/1.0
 
 III.
     Decrypt ROT13: http://rot13.com/index.php
