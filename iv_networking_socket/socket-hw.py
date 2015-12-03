@@ -10,11 +10,11 @@ I.
 II.
     openssl command -> connect to Google over https
     $ openssl s_client -connect google.com:443
-    $ GET / HTTP/1.0
-
+    $ GET /
+    
     telnet command -> connect to Google over http
     $ telnet google.com 80
-    $ GET / HTTP/1.0
+    $ GET /
 
 III.
     Decrypt ROT13: http://rot13.com/index.php
