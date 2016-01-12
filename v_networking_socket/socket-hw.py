@@ -1,3 +1,12 @@
+'''
+Server program that accepts multiple connections.
+
+TODO:
+Write program that connects to this one.
+Sends string to this program, then quits.
+Will see log in stdout.
+Bonus: Send string as command line argument.
+'''
 import socket
 TCP_IP = '0.0.0.0'  # This means that we should bind to all the addresses your computer has
 TCP_PORT = 5005  # Port we're listening on
