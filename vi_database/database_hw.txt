@@ -1,0 +1,33 @@
+$ cd projects/personal/cs_fundamentals/vi_database
+$ sqlite3 library.db
+
+album counts by year then genre -> year, genre, count
+
+example: 
+1956, Jazz, 25
+1957, Jazz, 2
+1957, Gospel, 5
+
+*Requires many tables due to normalized data schema
+
+TABLES:
+albums             contributors       images             scanned_files
+comments           dbix_migration     metainformation    tracks
+contributor_album  genre_track        playlist_track     years
+contributor_track  genres             progress
+
+GENRE_TRACK:
+genre,track
+3,8
+4,9
+
+GENRES: =>
+id,name,namesort,namesearch,customsearch,musicmagic_mixable
+3,Classical,CLASSICAL,CLASSICAL,,
+4,Jazz,JAZZ,JAZZ,,
+
+TRACKS: => tracks.year
+id,url,title,titlesort,titlesearch,customsearch,album,tracknum,content_type,timestamp,filesize,audio_size,audio_offset,year,secs,cover,vbr_scale,bitrate,samplerate,samplesize,channels,block_alignment,endian,bpm,tagversion,drm,disc,audio,remote,lossless,lyrics,musicbrainz_id,musicmagic_mixable,replay_gain,replay_peak,extid,primary_artist,urlmd5,coverid,cover_cached,virtual,added_time,updated_time,dlna_profile,hash
+8,file:///var/music/11%20-%20The%20Battle%20of%20Jericho.mp3,"The Battle of Jericho","BATTLE OF JERICHO","BATTLE OF JERICHO",,8,11,mp3,1361544380,4943161,4628860,314173,0,159.933,305349,1,231000.0,44100,,2,1,,,"ID3v2.3.0, ID3v1.1",0,1,1,0,0,,,,,,,9,8e7c942faaeb848605a5b92362255bb4,e4c0b25e,1,,1419914592,1419914592,MP3,
+9,file:///var/music/Abdullah%20Ibrahim/African%20Magic/01%20Blue%20Bolero%20(Fragment%201).mp3,"Blue Bolero (Fragment 1)","BLUE BOLERO FRAGMENT 1","BLUE BOLERO FRAGMENT 1",,9,1,mp3,1231126847,738073,735817,2256,2003,26.279,0,,224000.0,44100,,2,1,,,ID3v2.2.0,0,1,1,0,0,,,,-2.31,,,11,2e7c14c7ad26aa758ea0ddc37067364e,,,,1419914592,1419914592,MP3,
+10,file:///var/music/Abdullah%20Ibrahim/African%20Magic/02%20Third%20Line%20Samba.mp3,"Third Line Samba","THIRD LINE SAMBA","THIRD LINE SAMBA",,9,2,mp3,1231126849,4895505,4893257,2248,2003,174.759,0,,224000.0,44100,,2,1,,,ID3v2.2.0,0,1,1,0,0,,,,-8.7,,,11,20882eb5f83366d9b7c7255f9cc23f2c,,,,1419914592,1419914592,MP3,
