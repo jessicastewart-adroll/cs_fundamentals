@@ -21,7 +21,7 @@ void divide(int *num1, int num2) {
  
 int main()
 {
-	int x = 0;
+    int x = 0;
 
     add(&x, 6);
     printf("Integer after addition %d\n", x);
