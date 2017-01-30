@@ -1,38 +1,48 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /* gcc -o pointers pointers.c */
 /* ./pointers */
 
-void add(int *num1, int num2) {
-	*num1 = *num1 + num2;
+void add(int *num1, int *num2) {
+	*num1 = *num1 + *num2;
 }
 
-void subtract(int *num1, int num2) {
-	*num1 = *num1 - num2;
+void subtract(int *num1, int *num2) {
+	*num1 = *num1 - *num2;
 }
 
-void multiply(int *num1, int num2) {
-	*num1 = *num1 * num2;
+void multiply(int *num1, int *num2) {
+	*num1 = *num1 * *num2;
 }
 
-void divide(int *num1, int num2) {
-	*num1 = *num1 / num2;
+void divide(int *num1, int *num2) {
+	*num1 = *num1 / *num2;
 }
  
-int main()
+int main(int argc, char *argv[])
 {
-    int x = 0;
+    if (argc != 3) {
+        printf("This program takes 2 arguments! Run like this: %s <integer1> <integer2>\n", argv[0]);
+        return 1;
+    }
 
-    add(&x, 6);
-    printf("Integer after addition %d\n", x);
+	int x = atoi(argv[1]);
+    int y = atoi(argv[2]);
 
-    subtract(&x, 1);
-    printf("Integer after subtraction %d\n", x);
+    printf("Integers %d %d\n", x, y);
+
+    add(&x, &y);
+    printf("Integer after addition %d %d\n", x, y);
+
+    subtract(&x, &y);
+    printf("Integer after subtraction %d %d\n", x, y);
         
-    multiply(&x, 2);
-    printf("Integer after multiplication %d\n", x);
+    multiply(&x, &y);
+    printf("Integer after multiplication %d %d\n", x, y);
         
-    divide(&x, 5);
-    printf("Integer after division %d\n", x);
+    divide(&x, &y);
+    printf("Integer after division %d %d\n", x, y);
+
     return 0;
 }
