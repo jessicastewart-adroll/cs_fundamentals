@@ -4,20 +4,20 @@
 /* gcc -o pointers pointers.c */
 /* ./pointers */
 
-void add(int *num1, int *num2) {
-	*num1 = *num1 + *num2;
+void add(int *num1, int num2) {
+	*num1 = *num1 + num2;
 }
 
-void subtract(int *num1, int *num2) {
-	*num1 = *num1 - *num2;
+void subtract(int *num1, int num2) {
+	*num1 = *num1 - num2;
 }
 
-void multiply(int *num1, int *num2) {
-	*num1 = *num1 * *num2;
+void multiply(int *num1, int num2) {
+	*num1 = *num1 * num2;
 }
 
-void divide(int *num1, int *num2) {
-	*num1 = *num1 / *num2;
+void divide(int *num1, int num2) {
+	*num1 = *num1 / num2;
 }
  
 int main(int argc, char *argv[])
@@ -32,16 +32,16 @@ int main(int argc, char *argv[])
 
     printf("Integers %d %d\n", x, y);
 
-    add(&x, &y);
+    add(&x, y);
     printf("Integer after addition %d %d\n", x, y);
 
-    subtract(&x, &y);
+    subtract(&x, y);
     printf("Integer after subtraction %d %d\n", x, y);
         
-    multiply(&x, &y);
+    multiply(&x, y);
     printf("Integer after multiplication %d %d\n", x, y);
         
-    divide(&x, &y);
+    divide(&x, y);
     printf("Integer after division %d %d\n", x, y);
 
     return 0;
